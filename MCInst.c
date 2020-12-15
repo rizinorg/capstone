@@ -24,6 +24,7 @@ void MCInst_Init(MCInst *inst)
 		inst->Operands[i].ImmVal = 0;
 	}
 
+	memset(inst, 0, sizeof(MCInst));
 	inst->Opcode = 0;
 	inst->OpcodePub = 0;
 	inst->size = 0;
